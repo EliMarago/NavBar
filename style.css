@@ -1,0 +1,116 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(210, 209, 209);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgba(233, 231, 230, 0.616);
+}
+.nav-toggle {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 28px;
+  color: rgb(88, 86, 86);
+}
+nav {
+  background-color: rgb(255, 253, 250);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+.nav-toggle:hover {
+  color: rgb(42, 41, 41);
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+}
+.links a {
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 3s linear;
+  color: hsl(209, 34%, 30%);
+  letter-spacing: 0.1rem;
+}
+.links a:hover {
+  background: hsl(205, 82%, 70%);
+  color: rgb(42, 41, 41);
+  padding-left: 1.5rem;
+}
+.social-icons {
+  display: none;
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.show-links {
+  height: 10rem;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+  color: rgb(58, 58, 58);
+  transition: all 0.3s linear;
+}
+.social-icons a:hover {
+  color: rgb(41, 41, 41);
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+}
